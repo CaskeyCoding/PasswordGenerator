@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta property="og:image" content="http://example.com/logo.jpg">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1024">
+	<meta property="og:image:height" content="1024">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="ISO-8859-1">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  	<script src="js/randomPassword.js" ></script>
+  </head>
+  <body>
+     <div style="display:none;"><img src="img/password.jpg" alt="Secrets Image" onclick="copyPassword()"/></div>
+  	<div class="caskeycoding"><a href="http://caskeycoding.com"><img src="img/caskey-coding.png"/></a></div>
+    <div class="wrapper">
+	  <h1>Password Generator</h1>
+	  <div id="password"><input type="text" id="pwdField" readonly/><div class="image"><img src="img/clipboard.png" alt="Copy Password" onclick="copyPassword()"/></div></div>
+	  <div class = options>
+	    <div class = "option">
+	      Length <input type="number" id="length" min="8" max="99" value="16" />
+	    </div>
+		<div class = "option">
+		  Include Lowercase <input class="check" type="checkbox" id="lowercase" checked />
+		</div>
+		<div class = "option">
+		  Include Uppercase <input class="check" type="checkbox" id="uppercase" checked />
+		</div>
+		<div class = "option">
+		  Include Numbers <input class="check" type="checkbox" id="numbers" checked />
+		</div>
+		<div class = "option">
+		  Include Symbols <input class="check" type="checkbox" id="symbols" checked />
+		</div>
+	    <button class="button" id="generate" onclick="generatePassword()">Generate</button>
+	  </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
